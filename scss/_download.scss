@@ -1,0 +1,113 @@
+.download {
+    background: url(../img/1_2.png) left -40px bottom -40px no-repeat,
+        url(../img/2_2.png) right -40px bottom -40px no-repeat;
+
+    .content{
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            padding: 0 8%;
+        }  
+    }
+
+    h3 {
+        font: 25px/26px $font_OB;
+        text-align: center;
+        color: $black;
+        margin-bottom: 16px;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            margin-bottom: 16px;
+        }
+    }
+
+    p {
+        font: 16px/24px $font_OM;
+        text-align: center;
+        color: $black;
+        opacity: .5;
+        margin-bottom: 60px;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            font: 14px/26px $font_OR;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_row {
+        display: flex;
+        padding-bottom: 120px;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            padding-bottom: 50px;
+        }
+    }
+
+    &_img {
+        flex: 0 1 50%;
+        & img {
+            max-width: 100%;
+        }
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &_content {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 60px;
+
+        .download_btn {
+            display: flex;
+
+            a {
+                margin-right: 20px;
+                img {
+                    max-width: 100%;
+                    transition: box-shadow .5s;
+                    will-change: box-shadow;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    img {
+                        box-shadow: 5px 10px 50px rgba(74, 153, 211, .4);
+                    }
+                }
+            }
+        }
+        
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            padding-left: 0;
+            padding-top: 30px;
+            .download_btn {
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $mobile_s) and (max-width: $mobile) {
+        background: none;
+    }
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        background: url(../img/1_2.png) left -20px bottom -20px/15% no-repeat,
+        url(../img/2_2.png) right -20px bottom -20px/15% no-repeat;
+    }
+}

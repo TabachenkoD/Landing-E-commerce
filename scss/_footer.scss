@@ -1,0 +1,271 @@
+.footer {
+    background: $blue;
+    color: $white;
+
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $white;
+        min-width: 100%;
+        padding: 55px 8.5% 30px 8.5%;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 30px;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            flex-direction: column;
+            padding: 30px 5% 0 5%;
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            flex-direction: column;
+        }
+
+        @media (min-width: $desktop) and (max-width: 1190px) {
+            padding: 30px 3%;
+        }
+    }
+
+    &_logo {
+        flex: 0 1 auto;
+        font: 34px/35px $font_OB;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_nav {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            padding: 0 30px;
+
+            li {
+                font: 14px/14px $font_OR;
+                margin-bottom: 18px;
+
+                &:first-child {
+                    font: 18px/19px $font_OM;
+                    text-decoration: underline;
+                    margin-bottom: 40px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (max-width: $mobile) {
+                li {
+                    margin-bottom: 12px;
+
+                    &:first-child {
+                        margin-bottom: 20px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @media (min-width: $mobile_s) and (max-width: $desktop) {
+                padding: 0;
+            }
+
+            @media (min-width: $desktop) and (max-width: 1190px) {
+                padding: 0 20px;
+            }
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        @media (min-width: $mobile) and (max-width: $desktop) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &_form {
+        flex: 0 1 35%;
+        display: flex;
+        flex-direction: column;
+
+        .container {
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                min-height: 50px;
+                margin-right: 10px;
+                flex: 0 1 75%;
+                border-radius: 3px;
+                padding: 18px;
+                font: 14px/14px $font_OR;
+                color: #000;
+            }
+
+            input::placeholder {
+                color: rgba(0, 0, 0, .5);
+            }
+
+            button {
+                flex: 0 1 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font: 16px/17px $font_OB;
+                border-radius: 3px;
+                padding: 15px;
+                color: $blue;
+                background-color: $white;
+                transition: background-color .7s;
+                will-change: background-color;
+
+                &:hover {
+                    background-color: #4287b8;
+                    color: $white;
+                }
+            }
+        }
+
+        label {
+            font: 18px/26px $font_OR;
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex: 0 1 auto;
+
+            .container {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                input {
+                    flex: 0 1 auto;
+                    min-width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                button {
+                    flex: 0 1 100%;
+                    min-height: 50px;
+                }
+            }
+
+            label {
+                font: 14px/20px $font_OR;
+            }
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            flex: 0 1 auto;
+
+            .container {
+                padding: 15px 0;
+
+                input {
+                    flex: 0 1 100%;
+                }
+            }
+
+            label {
+                font: 16px/20px $font_OR;
+            }
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            flex: 0 1 auto;
+
+            .container {
+                padding-top: 15px;
+
+                input {
+                    flex: 0 1 100%;
+                }
+            }
+        }
+    }
+
+    .footer_bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 8.5%;
+
+        li {
+            display: inline-block;
+            margin: 0 12.5px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            will-change: transform;
+
+            & :hover {
+                transition: transform .3s;
+                transform: scale(1.1);
+            }
+        }
+
+        p {
+            font: 11px/11px $font_OB;
+            align-self: center;
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            li:last-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            padding: 20px 5%;
+        }
+
+        @media (min-width: $desktop) and (max-width: 1190px) {
+            padding: 20px 3%;
+        }
+    }
+}

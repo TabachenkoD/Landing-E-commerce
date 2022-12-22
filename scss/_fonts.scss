@@ -1,0 +1,32 @@
+
+@font-face {
+	font-family: "Objective-Bold";
+	src: url("../fonts/Objective-Bold.otf");
+	src: url("../fonts/Objective-Bold.ttf") format("truetype"), url("../fonts/Objective-Bold.woff") format("woff"),
+		url("../fonts/Objective-Bold.woff2") format("woff2"), url("../fonts/Objective-Bold.svg") format("svg");
+	font-style: normal;
+	font-weight: bold;
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Objective-Medium"; 
+	src: url("../fonts/Objective-Medium.otf");
+	src: url("../fonts/Objective-Medium.ttf") format("truetype"),
+	url("../fonts/Objective-Medium.woff") format("woff"), 
+	url("../fonts/Objective-Medium.woff2") format("woff2"),
+	url("../fonts/Objective-Medium.svg") format("svg"); 
+	font-style: normal; 
+	font-weight: normal; 
+	font-display: fallback;
+	}
+@font-face {
+		font-family: "Objective-Regular"; 
+		src: url("../fonts/Objective-Regular.otf");
+		src: url("../fonts/Objective-Regular.ttf") format("truetype"),
+		url("../fonts/Objective-Regular.woff") format("woff"), 
+		url("../fonts/Objective-Regular.woff2") format("woff2"),
+		url("../fonts/Objective-Regular.svg") format("svg"); 
+		font-style: normal; 
+		font-weight: normal; 
+		font-display: fallback;
+		}

@@ -1,0 +1,227 @@
+.reviews {
+    padding-top: 150px;
+    padding-bottom: 120px;
+
+    h2 {
+        font: 26px/27px $font_OB;
+        text-align: center;
+        color: $black;
+    }
+    .reviews_row {
+        display: flex;
+        position: relative;
+        padding-top: 120px;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            flex: 0 1 45%;
+            min-height: 400px;
+
+            .slides {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                position: relative;
+                transition: .7s;
+                min-width: 100%;
+                min-height: 100%;
+                padding: 0 100px;
+
+                blockquote {
+                    font: 16px/24px $font_OR;
+                    color: $black;
+                    opacity: .5;
+                    padding: 100px 0 40px 0;
+
+                    &::before {
+                        content: "\201C";
+                        font-family: $font_OM;
+                        font-size: 200px;
+                        color: #878787;
+                        display: block;
+
+                        @media (min-width: $mobile_s) and (max-width: $tablet) {
+                            font-size: 100px;
+                        }
+                        @media (min-width: $tablet) and (max-width: $desktop) {
+                            font-size: 150px;
+                        }
+                    }
+
+                    @media (min-width: $mobile_s) and (max-width: $tablet) {
+                        padding-top: 0;
+                    }
+
+                    @media (min-width: $tablet) and (max-width: $desktop) {
+                        padding-top: 60px;
+                    }
+                }
+                
+                figcaption {
+                    font: 18px/19px $font_OM;
+                    color: $black;
+                }
+
+                @media (min-width: $mobile_s) and (max-width: $mobile) {
+                    padding: 0 40px;
+                }
+            }
+            @media (min-width: $mobile_s) and (max-width: $mobile) {
+               margin-top: -20px;
+            }
+        }
+
+        #slide2:checked ~ .slider > .slides {
+            transform: translateX(-100%);
+        }
+
+        #slide3:checked ~ .slider > .slides {
+            transform: translateX(-200%);
+        }
+        
+        .controls_arrow {
+            height: 80px;
+            z-index: 30;
+            position: absolute;
+            bottom: -10%;
+            right: 23%;
+
+            @media (min-width: $mobile_s) and (max-width: $mobile) {
+                right: 35%;
+                bottom: -4%;
+            }
+
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                right: 40%;
+                bottom: 2%;
+            }
+
+            @media (min-width: $tablet) and (max-width: $desktop) {
+                bottom: -18%;
+            }
+        }
+        .controls_arrow label {
+            cursor: pointer;
+            display: none;
+            width: 80px;
+            height: 80px;
+
+            @media (min-width: $mobile_s) and (max-width: $tablet) {
+                width: 50px;
+                height: 50px;
+            } 
+        }
+
+        #slide1:checked ~ .controls_arrow label:nth-child(2),
+        #slide2:checked ~ .controls_arrow label:nth-child(3),
+        #slide3:checked ~ .controls_arrow label:nth-child(1) {
+            background: url(../img/dashicons_arrow-right-alt2.png) right 50% top 50% no-repeat;
+            float: right;
+            display: block;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+            border-radius: 0 4px 4px 0;
+        }
+
+        #slide1:checked ~ .controls_arrow label:nth-child(3),
+        #slide2:checked ~ .controls_arrow label:nth-child(1),
+        #slide3:checked ~ .controls_arrow label:nth-child(2) {
+            background: url(../img/Group88.png) no-repeat;
+            float: left;
+            display: block;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+
+            @media (min-width: $mobile_s) and (max-width: $tablet) {
+                background: url(../img/Group88.png) right 50% top 50% no-repeat;
+                border-radius: 4px 0 0 4px;
+            } 
+        }
+      
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column;
+            padding-top: 80px;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    .reviews_img {
+        flex: 0 0 42%;
+        background-color: rgba(74, 153, 211, .1);
+        max-height: 400px;
+
+        img {
+            transform: translate(25%, -120px);
+            max-width: 100%;
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex: 0 1 auto;
+            img {
+                transform: translate(0, -15px);
+                max-width: 320px;
+            }
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            flex: 0 1 auto;
+            img {
+                transform: translate(25%, -120px);
+                max-width: 576px;
+            }
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            flex: 0 1 auto;
+            img {
+                transform: translateY(-120px);
+                max-width: 100%;
+            }
+        }
+    }
+
+    .decor_dots {
+        position: absolute;
+        top: 25%;
+        right: 1%;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            display: none;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            top: 70%;
+            right: -10%;
+        }
+
+        @media (min-width: $tablet) and (max-width: $desktop) {
+            top: 50%;
+            right: -7%;
+        }
+    }
+
+    @media (min-width: $mobile_s) and (max-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        padding-bottom: 10px;
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        padding-top: 80px;
+    }
+}

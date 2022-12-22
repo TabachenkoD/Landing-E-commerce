@@ -1,0 +1,40 @@
+@import "_reset";
+@import "_fonts";
+@import "_vars";
+@import "_header";
+@import "_main_screen";
+@import "_offer";
+@import "_how_it_works";
+@import "_reviews";
+@import "_download";
+@import "footer";
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content_flex {
+    flex: 1 1 auto;
+}
+
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 13%;
+}
+
+@media (min-width: $mobile_s) and (max-width: $mobile) {
+    .content {
+        padding: 0 2%;
+    }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+    .content {
+        padding: 0 5%;
+    }
+}
+

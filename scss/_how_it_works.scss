@@ -1,0 +1,67 @@
+.how_it_works {
+    background-color: rgba(74, 153, 211, .1);
+    padding: 95px 0;
+
+    h2 {
+        font: 26px/27px $font_OB;
+        text-align: center;
+        color: $blue;
+        margin-bottom: 90px;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            margin-bottom: 60px;
+        }
+    }
+
+    h3 {
+        font: 18px/19px $font_OM;
+        color: $black;
+        margin-bottom: 10px;
+    }
+    p {
+        font: 16px/26px $font_OR;
+        text-align: center;
+        color: $black;
+    }
+
+    &_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
+    .paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+
+        img {
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $mobile) {
+            margin-top: 40px;
+            
+            img {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+    @media (min-width: $mobile_s) and (max-width: $tablet) {
+        padding: 50px 0;
+    }
+}

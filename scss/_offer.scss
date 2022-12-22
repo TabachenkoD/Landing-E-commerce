@@ -1,0 +1,217 @@
+.offer {
+    background: url(../img/1.png) right top no-repeat, url(../img/2.png) left bottom no-repeat;
+    
+
+    .content {
+        @media (min-width: $mobile_s) and (max-width: $tablet) {
+            padding: 0 8%;
+        }  
+    }
+
+    .cards_row {
+        display: flex;
+        justify-content: space-between;
+        padding: 150px 0;
+
+        h2 {
+            font: 36px/128% $font_OM;
+            letter-spacing: .05em;
+            color: #260041;
+            padding-right: 20px;
+
+            @media (min-width: $mobile_s) and (max-width: $mobile) {
+                font-size: 28px;
+            }
+
+            @media (min-width: $mobile) and (max-width: $tablet) {
+                font-size: 32px;
+            }
+        }
+
+        .cards_column {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 50%;
+
+            h3 {
+                font: 20px/30px $font_OM;
+                letter-spacing: .02em;
+                color: $black;
+                margin-top: 56px;
+                margin-bottom: 16px;
+
+                @media (min-width: $mobile_s) and (max-width: $mobile) {
+                    font: 16px/26px $font_OM;
+                    margin-top: 30px;
+                }
+            }
+
+            .cards {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: $white;
+                box-shadow: 5px 20px 50px rgba(74, 153, 211, .2);
+                border-radius: 10px;
+                max-width: 380px;
+                max-height: 525px;
+                padding: 48px;
+                position: relative;
+
+                img {
+                    align-self: center;
+                }
+
+                p {
+                    font: 16px/162% $font_OR;
+                    color: $black;
+                    opacity: .6;
+                    margin-bottom: 62px;
+
+                    @media (min-width: $mobile_s) and (max-width: $mobile) {
+                        font: 14px/142% $font_OR;
+                        margin-bottom: 42px;
+                    }
+                }
+
+                a {
+                    font: 14px/30px $font_OM;
+                    color: $blue;
+
+                    &::after {
+                        display: inline-block;
+                        content: url("../img/Vector.png");
+                        padding-left: 19px;
+                        transform: translateY(10%);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                @media (min-width: $mobile_s) and (max-width: $tablet) {
+                    padding: 38px;
+                }
+            }
+
+            .column_left {
+                .decor_dots {
+                    position: absolute;
+                    top: 40%;
+                    left: -28%;
+                    z-index: -99;
+                }
+
+                @media (min-width: $mobile_s) and (max-width: $mobile) {
+                    align-self: center;
+                    margin: 30px 0;
+                }
+
+                @media (min-width: $mobile) and (max-width: $tablet) {
+                    align-self: center;
+                    margin: 40px 0;
+                }
+            }
+
+            .column_right {
+
+                &:nth-child(1) {
+                    margin-top: 110px;
+                    .decor_dots {
+                        position: absolute;
+                        bottom: -15%;
+                        right: -20%;
+                        z-index: -99;
+                    }
+
+                    @media (min-width: $mobile_s) and (max-width: $tablet) {
+                        margin-top: 0;
+                        .decor_dots {
+                            display: none;
+                        }
+                    }
+                    
+                    @media (min-width: $tablet) and (max-width: $desktop) {
+                        margin-top: 50px;
+                        .decor_dots {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    padding-top: 0;
+
+                    img {
+                        transform: translateY(-8%);
+                        max-width: 100%;
+                    }
+
+                    .decor_dots {
+                        position: absolute;
+                        top: -14%;
+                        right: -20%;
+                        z-index: -99;
+                    }
+
+                    @media (min-width: $mobile_s) and (max-width: $mobile) {
+                        padding-top: 0;
+                        margin-top: 30px;
+                    }
+
+                    @media (min-width: $mobile) and (max-width: $tablet) {
+                        padding-top: 0;
+                        margin: 40px 0;
+                    }
+                }
+            }
+        }
+
+        .cards_column {
+
+            &:nth-child(1) {
+                align-items: flex-end;
+                margin-right: 110px;
+                & .card_offer_title {
+                    margin-bottom: 170px;
+                }
+
+                @media (min-width: $mobile_s) and (max-width: $tablet) {
+                    margin-right: 0;
+                    & .card_offer_title {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media (min-width: $tablet) and (max-width: $desktop) {
+                    margin-right: 50px;
+                    & .card_offer_title {
+                        margin-bottom: 100px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                align-items: flex-start;
+                flex-direction: column-reverse;
+
+                @media (min-width: $mobile_s) and (max-width: $tablet) {
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        @media (min-width: $mobile_s) and (max-width: $tablet) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 0;
+        }
+    }
+
+    @media (min-width: $mobile_s) and (max-width: $tablet) {
+        background: url(../img/1.png) right top/20% no-repeat, url(../img/2.png) left bottom/20% no-repeat;
+    }
+}
