@@ -1,4 +1,4 @@
-# Landing-E-commerce
+# Landing E-commerce
 
 This is my tutorial project on creating a landing page from figma.  
   
